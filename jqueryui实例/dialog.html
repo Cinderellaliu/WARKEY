@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>dialog</title>
+	<link rel="stylesheet" href="./jquery-ui-1.12.1.custom/jquery-ui.css">
+	<link rel="stylesheet" href="./css/main.css">
+</head>
+<body>
+	<button class="button">我可以开启dialog</button>
+	<div id="dialog" title="Basic dialog">
+  		
+	</div>
+</body>
+</html>
+<script src="./js/jquery-1.11.0.min.js"></script>
+<script src="./jquery-ui-1.12.1.custom/jquery-ui.js"></script>
+<script>
+	$( function() {
+	$('.button').on('click',function(){
+		$( "#dialog" ).dialog({
+			autoOpen:true,
+		});
+	})
+    $( "#dialog" ).dialog({
+    	autoOpen:false,
+    	height:400,
+    	width:500,
+    	title:'编辑',
+    	buttons: [
+    {
+      text: "确定",
+      icon: "ui-icon-heart",
+      click: function() {
+        $( this ).dialog( "close" );
+      }
+    },
+    {
+      text: "取消",
+      icon: "ui-icon-gear",
+      click: function() {
+        $( this ).dialog( "close" );
+      }
+    }
+  ]
+    });
+  } );
+</script>

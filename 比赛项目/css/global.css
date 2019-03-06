@@ -1,0 +1,24 @@
+@charset "utf-8";  
+/* CSS Document */  
+  
+/* CSS重置 */  
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,button,textarea,p,blockquote,th,td{margin:0;padding:0;}  
+body{ font-size:14px; line-height:1.42857; font-family: "Helvetica Neue",Helvetica,Arial,"Hiragino Sans GB W3","Microsoft YaHei UI","Microsoft YaHei","WenQuanYi Micro Hei",sans-serif!important; background:#fff; color:#333; -webkit-text-size-adjust:100%;}  
+table { border-collapse:collapse; border-spacing:0;}  
+fieldset,img { border:0;}  
+address,caption,cite,code,dfn,em,strong,th,var,optgroup { font-style:normal; font-weight: normal;}  
+del,ins{text-decoration:none;}  
+ol,ul,li { list-style:none;}  
+caption,th { text-align:left;}  
+h1,h2,h3,h4,h5,h6 { font-size:100%; font-weight:normal;}  
+input,button,textarea,select,optgroup,option{font-family:inherit;font-size:inherit;font-style:normal;font-weight:normal; outline:none;}  
+input,button,textarea,select{*font-size:100%;}  
+textarea { resize:none;}  
+i, em, strong { font-style:normal;}  
+/* 单独的清除元素*/
+.clear {clear: both;display: block;overflow: hidden;visibility: hidden;width: 0;height: 0;}
+/* 当一个外部元素内部有浮动元素时，外部元素如需清除浮动，用如下的清除样式 */
+.clearfix:after {clear: both;content: '.';display: block;visibility: hidden;height: 0;}
+.clearfix {display: inline-block;}
+* html .clearfix {height: 1%;}
+.clearfix {display: block;} 

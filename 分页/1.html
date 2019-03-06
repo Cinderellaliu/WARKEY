@@ -1,0 +1,52 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+	a{text-decoration:none;}
+	#happy{width:100%;}
+	#happy li{
+		width:6.5%;
+		float:left;
+		list-style:none;
+		border:1px solid #333;
+		text-align:center;
+	}
+    #happy li[hover]{background:#333;}
+	#happy li a{
+		color:black;
+	}
+	#happy .active{
+		border:1px solid blue;
+		background:blue;
+	}
+	#happy .active a{color:#fff;}
+	</style>
+</head>
+<body>
+	<div id="happy"></div>
+</body>
+</html>
+<script src="./js/jquery.js"></script>
+<script src="./js/jqPaginator.js"></script>
+<script>
+	$(function(){
+		$.jqPaginator('#happy', {
+	        totalPages: 100,
+	        visiblePages: 10,
+	        currentPage: 1,
+	        first: '<li class="first"><a href="javascript:void(0);">首页</a></li>',
+	        prev: '<li class="prev"><a href="javascript:;">前一页</a></li>',
+	        next: '<li class="next"><a href="javascript:void(0);">下一页</a></li>',
+	        last: '<li class="last"><a href="javascript:void(0);">尾页</a></li>',
+	        page: '<li class="page"><a href="javascript:;">{{page}}</a></li>',
+	        onPageChange: function (num, type) {
+        		$('#text').html('当前第' + num + '页');
+    		}
+    	});
+	})
+	$('#happy li').on('click',function(){
+		$(this).addClass('active');
+	})
+</script>

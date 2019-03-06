@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>图片变大</title>
+	<style>
+		img{width:100%;height:100%;}
+		.big-pic{width:254px;height:172px;float:left;}
+		.small-pic{width:60px;height:40px;float:left;}
+		.small-pic:nth-child(2){clear:both;}
+	</style>
+</head>
+<body>
+	<div class="all">
+		<a class="big-pic">
+			<img src="./img/1.jpg" alt="big">
+		</a>
+		<a class="small-pic">
+			<img src="./img/1.jpg" alt="small">
+		</a>
+		<a class="small-pic">
+			<img src="./img/2.jpg" alt="small">
+		</a>
+		<a class="small-pic">
+			<img src="./img/3.jpg" alt="small">
+		</a>
+		<a class="small-pic">
+			<img src="./img/4.jpg" alt="small">
+		</a>
+	</div>	
+</body>	
+</html>
+<script src="./js/jquery.min.js"></script>
+<script>
+    function changeImg(obj){
+    	if(obj.find('img').attr('alt')=='small'){
+    		var big_src=obj.siblings('a').find('img[alt=big]').attr('src');//获取图片的路径
+    		// var big_url=obj.siblings('a[class="big-pic"]').attr('href');
+    		//获取a标签的路径
+    		var small_src=obj.find('img').attr('src');//获取小图片的路径
+    		// var small_url=obj.attr('href');//获取a的路径
+    		obj.siblings('a').find('img[alt=big]').attr('src',small_src);//寻找大图片并换成小图片路径；
+    	}
+    }
+    $(".all a").click(function(){
+            changeImg($(this))
+        });
+</script>

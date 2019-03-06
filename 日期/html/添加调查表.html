@@ -1,0 +1,310 @@
+
+<!DOCTYPE html>
+<!--
+BeyondAdmin - Responsive Admin Dashboard Template build with Twitter Bootstrap 3.2.0
+Version: 1.0.0
+Purchase: http://wrapbootstrap.com
+-->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<!-- Head -->
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+
+    <meta name="description" content="form layouts" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link rel="shortcut icon" href="../assets/img/favicon.png" type="image/x-icon">
+
+    <!--Basic Styles-->
+    <link href="../assets/css/bootstrap.min.css" rel="stylesheet" />
+    <link id="bootstrap-rtl-link" href="" rel="stylesheet" />
+    <link href="../assets/css/font-awesome.min.css" rel="stylesheet" />
+    <link href="../assets/css/weather-icons.min.css" rel="stylesheet" />
+
+    <!--Fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,400,600,700,300" rel="stylesheet" type="text/css">
+
+    <!--Beyond styles-->
+    <link href="../assets/css/beyond.min.css" rel="stylesheet" />
+    <link href="../assets/css/demo.min.css" rel="stylesheet" />
+    <link href="../assets/css/typicons.min.css" rel="stylesheet" />
+    <link href="../assets/css/animate.min.css" rel="stylesheet" />
+    <link href="../js/bootstrap-select/css/bootstrap-select.min.css" rel="stylesheet" type="text/css" />
+    <link href="../js/bootstrap-datetimepicker/css/bootstrap-datetimepicker.min.css" rel="stylesheet" type="text/css" />
+    <link href="../css/main.css" rel="stylesheet" />
+    <link id="skin-link" href="" rel="stylesheet" type="text/css" />
+
+    <!--Skin Script: Place this script in head to load scripts for skins and rtl support-->
+    <script src="../assets/js/skins.min.js"></script>
+</head>
+<body class="grey-bg">
+<div class="overlay"></div>
+<div class="overlay02"></div>
+<div class="index-top">
+    <div class="main-content clearfix">
+        <div class="logo-box">
+            <img src="../images/logo.png" />
+            <span class="logo-text">轻松办好大活动</span>
+        </div>
+        <div class="sidebar-collapse">
+            <i class="collapse-icon fa fa-bars"></i>
+        </div>
+        <div class="top-user">
+            <div class="btn-group">
+                <button id="btnGroupVerticalDrop1" type="button" class="btn btn-default dropdown-toggle clearfix" data-toggle="dropdown">
+                    <span class="pull-left">我的DiDaOK</span> <i class="fa fa-sort-down"></i>
+                </button>
+                <ul class="dropdown-menu" role="menu" aria-labelledby="btnGroupVerticalDrop1">
+                    <li>
+                        <a href="#">全部DiDaOK</a>
+                    </li>
+                    <li>
+                        <a href="#">我的DiDaOK</a>
+                    </li>
+                    <li>
+                        <a href="#">旺旺集团的DiDaOK</a>
+                    </li>
+                    <li>
+                        <a href="#">转转集团的DiDaOK</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="sidebar-collapse02">
+            <i class="fa fa-ellipsis-h"></i>
+        </div>
+    </div>
+</div>
+<div class="index-content">
+    <div class="main-content clearfix">
+        <div class="index-left">
+            <div class="white-box index-left-box01">
+                <div class="user-box">
+                    <img src="../images/photo.png" />
+                    <h1>Jacky Cheung</h1>
+                    <h2>积分：4396</h2>
+                    <h3>免费版<a href="#">升级</a></h3>
+                </div>
+                <div class="code-box">
+                    <img src="../images/code_pic.png" />
+                </div>
+                <a href="#" class="code-btn"></a>
+            </div>
+            <div class="white-box index-left-box02">
+                <a href="#">创建活动</a>
+            </div>
+            <div class="white-box index-left-box03">
+                <a href="index.html" class="clearfix active"><i class="fa fa-flag"></i>活动中心<span></span></a>
+                <a href="活动草稿箱.html" class="clearfix"><i class="fa fa-pencil-square"></i>活动草稿箱</a>
+                <hr />
+                <a href="#" class="clearfix"><i class="fa fa-book"></i>通讯录</a>
+                <a href="#" class="clearfix"><i class="fa fa-envelope"></i>消息中心</a>
+                <a href="#" class="clearfix"><i class="fa fa-file-text"></i>云文档</a>
+                <a href="#" class="clearfix"><i class="fa fa-star"></i>活动收藏夹</a>
+                <hr />
+                <a href="#" class="clearfix"><i class="fa fa-user"></i>Jacky Cheung</a>
+                <a href="#" class="clearfix"><i class="fa fa-sign-out"></i>退出</a>
+            </div>
+        </div>
+        <div class="white-box index-right">
+            <div class="index-right-title clearfix"><a href="javascript:void(0)" onclick="history.go(-1)"><img src="../images/back_btn.png" /></a>添加调查表</div>
+            <div id="horizontal-form" class="active-form">
+                <form class="form-horizontal" role="form">
+                    <h1>调查表标题</h1>
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label no-padding-right">标题：</label>
+                        <div class="col-sm-8">
+                            <input type="text" class="form-control"  placeholder="请输入文本" />
+                        </div>
+                    </div>
+                    <hr />
+                    <h1>设置调查有效期</h1>
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label no-padding-right">调查开始时间：</label>
+                        <div class="col-sm-8">
+                            <div class="active-form-datetime">
+                                <div class="input-group date form_datetime">
+                                    <input type="text" size="16" readonly class="form-control" />
+                                        <span class="input-group-btn">
+                                            <button class="btn default date-set" type="button">
+                                                <!--<i class="fa fa-calendar"></i>-->
+                                            </button>
+                                        </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label no-padding-right">调查结束时间：</label>
+                        <div class="col-sm-8">
+                            <div class="active-form-datetime">
+                                <div class="input-group date form_datetime">
+                                    <input type="text" size="16" readonly class="form-control" />
+                                        <span class="input-group-btn">
+                                            <button class="btn default date-set" type="button">
+                                                <!--<i class="fa fa-calendar"></i>-->
+                                            </button>
+                                        </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <hr />
+                    <h1>设置调查项目</h1>
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label no-padding-right">自定义项目：</label>
+                        <div class="col-sm-8 set-signup-item">
+                            <div class="item-box clearfix">
+                            </div>
+                            <a data-toggle='modal' href='#addItem' class="add-item-btn"><i class="fa fa-plus"></i></a>
+                        </div>
+                    </div>
+                    <hr />
+                    <button class="signup-btn">保存</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="foot">
+    <div class="main-content clearfix">
+        <div class="foot-logo">
+            <img src="../images/foot_logo.png" />
+            &nbsp;&nbsp;轻松办好大活动
+        </div>
+        <div class="foot-menu">
+            <a href="#">关于我们</a>
+            <a href="#">新手指南</a>
+            <a href="#">服务条款</a>
+            <a href="#">联系我们</a>
+        </div>
+        <a href="#" class="wchat"></a>
+    </div>
+    <div class="copy-right">Copyright © 2017 DiDaOK活动平台</div>
+</div>
+<!--设置调查项目弹窗-->
+<div class="modal fade" id="addItem" tabindex="-1" role="dialog" aria-labelledby="addItemLabel">
+    <div class="modal-dialog modal-sm modal-small" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="addItemLabel">自定义字段</h4>
+            </div>
+            <div class="modal-body">
+                <form class="form-horizontal addItem-form" role="form">
+                    <h1>选择调查项目格式</h1>
+                    <div class="form-group">
+                        <div class="radio">
+                            <label>
+                                <input name="addItem-radio" type="radio" class="inverted item-select-hide-btn" checked>
+                                <span class="text"><b>填写问题</b></span>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="radio">
+                            <label>
+                                <input name="addItem-radio" type="radio" class="inverted item-select-btn">
+                                <span class="text"><b>单选问题</b></span>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="radio">
+                            <label>
+                                <input name="addItem-radio" type="radio" class="inverted item-select-btn">
+                                <span class="text"><b>多选问题</b></span>
+                            </label>
+                        </div>
+                    </div>
+                    <hr />
+                    <h1>自定义调查项目</h1>
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label no-padding-right">标题</label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control"  value="整体而言您对活动的感觉是？" />
+                        </div>
+                    </div>
+                    <div class="form-group item-select-box">
+                        <label class="col-sm-2 control-label no-padding-right">选项</label>
+                        <div class="col-sm-10">
+                            <a href="javascript:void(0);" onclick="appendAddress()" class="add-address-btn"><i class="fa fa-plus"></i></a>
+                            <div class="address-list-box">
+                                <div class="address-list clearfix">
+                                    <input type="text" class="form-control"  value="非常满意" />
+                                    <a href="javascript:void(0);" class="del-address-btn"><i class="fa fa-minus"></i></a>
+                                </div>
+                                <div class="address-list clearfix">
+                                    <input type="text" class="form-control"  value="相当满意" />
+                                    <a href="javascript:void(0);" class="del-address-btn"><i class="fa fa-minus"></i></a>
+                                </div>
+                                <div class="address-list clearfix">
+                                    <input type="text" class="form-control"  value="普通" />
+                                    <a href="javascript:void(0);" class="del-address-btn"><i class="fa fa-minus"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <hr  />
+                    <div class="modal-footer del-group-btn-box addItem-tc-btn">
+                        <button type="button" class="btn btn-primary">确定</button>
+                        <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                    </div>
+                </form>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<script src="../assets/js/jquery-2.0.3.min.js"></script>
+<script src="../assets/js/bootstrap.min.js"></script>
+<script src="../js/menu.js"></script>
+<script src="../js/bootstrap-select/js/bootstrap-select.min.js" type="text/javascript"></script>
+<script src="../js/app.min.js" type="text/javascript"></script>
+<script src="../js/components-bootstrap-select.js" type="text/javascript"></script>
+<script src="../js/bootstrap-datetimepicker/js/bootstrap-datetimepicker.min.js" type="text/javascript"></script>
+<script src="../js/bootstrap-datetimepicker/js/locales/bootstrap-datetimepicker.zh-CN.js" type="text/javascript"></script>
+<script>
+    // 	添加调查项目效果
+    function appendAddress()
+    {
+        $(".address-list-box").append("<div class='address-list clearfix'><input type='text' class='form-control' /><a href='javascript:void(0);' class='del-address-btn'><i class='fa fa-minus'></i></a></div>");
+    }
+</script>
+<script>
+    $(document).ready(function () {
+//        二维码切换效果
+        $(".code-btn").click(function(){
+            $(this).toggleClass("user-btn");
+            $(".index-left-box01 .code-box").toggle();
+            $(".index-left-box01 .user-box").toggle();
+        });
+//        日期控件效果
+        $(".form_datetime").datetimepicker({
+            language:'zh-CN',
+            autoclose: true,
+            isRTL: App.isRTL(),
+            format: "yyyy-mm-dd hh:ii",
+            pickerPosition: (App.isRTL() ? "bottom-right" : "bottom-left")
+        });
+//        删除调查选项
+        $(".address-list-box").on('click', '.del-address-btn', function () {
+            $(this).parents(".address-list").remove();
+        });
+ //        弹窗单选按钮点击事件
+        $(".item-select-box").hide();
+        $(".item-select-btn").click(function(){
+            $(".item-select-box").show();
+        });
+        $(".item-select-hide-btn").click(function(){
+            $(".item-select-box").hide();
+        });
+    });
+
+
+</script>
+</body>
+</html>

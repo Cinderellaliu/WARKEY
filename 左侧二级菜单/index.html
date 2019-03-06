@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link href="./css/bootstrap.min.css" rel="stylesheet">
+</head>
+<style>
+	a{color:black;}
+	a:hover,a:visited,a:focus{text-decoration: none;outline: none;}
+	button,button:focus{outline: none;}
+	input,input:focus{outline: none !important;}
+	body {position: relative;min-width: 1024px;font-family: "microsoft yahei";color:#333;}
+	img{max-width: 100%;}
+	ul{margin:0;padding:0;}
+	ul li{list-style:none;}
+	i,em{font-style:normal;}
+	b{font-weight:normal;}
+	p{margin:0;}
+	label{font-weight:normal}
+	.menu-section{position: relative;border-bottom: 1px solid #d5fffe;}
+	.menu-section>ul{height:50px;}
+	.menu-section>ul>li{float:left;margin-right:4%;}
+	.menu-section>ul>li:last-child{margin-right:0;}
+	.menu-section>ul>li>a{font-size:16px;color:black;line-height: 48px;display: block;}
+	.menu-section>ul>li>a.red-text{color:#da1600;}
+	.menu-section02{border-bottom:1px solid #ddf9fc;}
+	.menu-section02>ul>li>a{font-size:14px;}
+	.menu-section02>ul>li>a.first-menu{background: url(images/to_li.png) no-repeat right center;padding:0 23px 0 0;}
+	.sub-menu{position: absolute;top:50px;width:100%;background:#fbfbfb;left:0;display: none;z-index: 9999;}
+	.sub-menu-list{height:50px;width:100%;display:table;text-align:center;}
+	.sub-menu-list>li{display:inline-block;margin-right: 5%;}
+	.sub-menu-list>li>a{font-size: 14px;color:#333;line-height: 50px;}
+	.sub-menu-list>li:last-child{margin-right:0;}
+	.sub-menu-img{border-bottom:2px solid #da1600;color:#da1600;}
+	.category-menu{position: relative;}
+	.category-menu .sub-menu{width:228px;min-height: 390px;}
+	.category-menu .sub-menu a{float:none;display: block;text-align: center;padding:0 10px;line-height: 50px;margin-right:0;}
+	.category-menu .sub-menu>li{padding:1px 0 1px 1px;}
+	.category-menu .sub-menu>li>a:hover,.menu-section02 .sub-menu>li>a.active{background: white;color:#333;}
+	.category-menu .sub-menu>li>ul{display:none;position: absolute;z-index:9999;width:550px;min-height:390px;left:228px;top:0;background: white;color:#333;border:1px solid #dcdcdc;border-left:none;padding:10px 20px;}
+	.category-menu .sub-menu>li ul a{color:#333;float:left;}
+	.category-menu .sub-menu>li>ul li.recommend-menu{margin-bottom: 20px;}
+	.category-menu .sub-menu>li>ul li.recommend-menu>a{background:#da1600;border-radius: 2px;color:white;margin-right:20px;line-height:30px;font-size: 12px;}
+	.category-menu .sub-menu>li>ul li.recommend-menu>a:hover{color:white;}
+	.category-menu .sub-menu>li>ul li ul{width:calc(100% - 75px);float:left;}
+	.category-menu .sub-menu>li>ul li>span{float:left;width:75px;}
+	.category-menu .sub-menu>li>ul li>a{line-height: 1.42857143;margin-bottom: 10px;font-size: 14px;background: url(images/submenu_cutline.png) no-repeat left center;padding-left:15px;padding-right:15px;}
+	.category-menu .sub-menu>li>ul li>a:hover{color:#da1600}
+</style>
+<body>
+	<div class="menu-section menu-section02">
+	<ul class="container clearfix">
+		<li class="category-menu">
+			<a href="#" class="first-menu red-text">全部商品分类</a>
+			<ul class="sub-menu">
+				<li>
+					<a href="#">女装</a>
+					<ul>
+						<li class="recommend-menu clearfix"><a href="">推荐品牌1</a><a href="">推荐品牌2</a><a href="">推荐品牌3</a></li>
+						<li>
+							<span>二级分类1</span>
+							<ul>
+								<li class="clearfix">
+									<a href="#">T恤</a>
+									<a href="#">牛仔裤</a>
+									<a href="#">休闲裤</a>
+									<a href="#">衬衫</a>
+									<a href="#">短裤</a>
+									<a href="#">夹克</a>
+									<a href="#">卫衣</a>
+									<a href="#">毛呢大衣</a>
+									<a href="#">大码男装</a>
+									<a href="#">西装套装</a>	
+								</li>
+							</ul>
+						</li>
+						<li>
+							<span>二级分类2</span>
+							<ul>
+								<li class="clearfix">
+									<a href="#">T恤</a>
+									<a href="#">牛仔裤</a>
+									<a href="#">休闲裤</a>
+									<a href="#">衬衫</a>
+									<a href="#">短裤</a>
+									<a href="#">夹克</a>
+									<a href="#">卫衣</a>
+									<a href="#">毛呢大衣</a>
+									<a href="#">大码男装</a>
+									<a href="#">西装套装</a>	
+								</li>
+							</ul>
+						</li>							
+					</ul>						
+				</li>					
+				<li>
+					<a href="#">男装</a>
+					<ul>
+						<li class="recommend-menu clearfix"><a href="">推荐品牌1</a><a href="">推荐品牌2</a><a href="">推荐品牌3</a></li>
+						<li>
+							<span>二级分类01</span>
+							<ul>
+								<li class="clearfix">
+									<a href="#">T恤</a>
+									<a href="#">牛仔裤</a>
+									<a href="#">休闲裤</a>
+									<a href="#">衬衫</a>
+									<a href="#">短裤</a>
+									<a href="#">夹克</a>
+									<a href="#">卫衣</a>
+									<a href="#">毛呢大衣</a>
+									<a href="#">大码男装</a>
+									<a href="#">西装套装</a>	
+								</li>
+							</ul>
+						</li>
+						<li>
+							<span>二级分类02</span>
+							<ul>
+								<li class="clearfix">
+									<a href="#">T恤</a>
+									<a href="#">牛仔裤</a>
+									<a href="#">休闲裤</a>
+									<a href="#">衬衫</a>
+									<a href="#">短裤</a>
+									<a href="#">夹克</a>
+									<a href="#">卫衣</a>
+									<a href="#">毛呢大衣</a>
+									<a href="#">大码男装</a>
+									<a href="#">西装套装</a>	
+								</li>
+							</ul>
+						</li>
+						
+					</ul>						
+				</li>					
+				<li>
+					<a href="#">童装</a>
+					<ul>
+						<li class="recommend-menu clearfix"><a href="">推荐品牌1</a><a href="">推荐品牌2</a><a href="">推荐品牌3</a></li>
+						<li>
+							<span>二级分类03</span>
+							<ul>
+								<li class="clearfix">
+									<a href="#">T恤</a>
+									<a href="#">牛仔裤</a>
+									<a href="#">休闲裤</a>
+									<a href="#">衬衫</a>
+									<a href="#">短裤</a>
+									<a href="#">夹克</a>
+									<a href="#">卫衣</a>
+									<a href="#">毛呢大衣</a>
+									<a href="#">大码男装</a>
+									<a href="#">西装套装</a>	
+								</li>
+							</ul>
+						</li>
+						<li>
+							<span>二级分类03</span>
+							<ul>
+								<li class="clearfix">
+									<a href="#">T恤</a>
+									<a href="#">牛仔裤</a>
+									<a href="#">休闲裤</a>
+									<a href="#">衬衫</a>
+									<a href="#">短裤</a>
+									<a href="#">夹克</a>
+									<a href="#">卫衣</a>
+									<a href="#">毛呢大衣</a>
+									<a href="#">大码男装</a>
+									<a href="#">西装套装</a>	
+								</li>
+							</ul>
+						</li>							
+					</ul>						
+				</li>					
+				<li>
+					<a href="#">内衣</a>
+					<ul>
+						<li class="recommend-menu clearfix"><a href="">推荐品牌1</a><a href="">推荐品牌2</a><a href="">推荐品牌3</a></li>
+						<li>
+							<span>二级分类04</span>
+							<ul>
+								<li class="clearfix">
+									<a href="#">T恤</a>
+									<a href="#">牛仔裤</a>
+									<a href="#">休闲裤</a>
+									<a href="#">衬衫</a>
+									<a href="#">短裤</a>
+									<a href="#">夹克</a>
+									<a href="#">卫衣</a>
+									<a href="#">毛呢大衣</a>
+									<a href="#">大码男装</a>
+									<a href="#">西装套装</a>	
+								</li>
+							</ul>
+						</li>
+						<li>
+							<span>二级分类04</span>
+							<ul>
+								<li class="clearfix">
+									<a href="#">T恤</a>
+									<a href="#">牛仔裤</a>
+									<a href="#">休闲裤</a>
+									<a href="#">衬衫</a>
+									<a href="#">短裤</a>
+									<a href="#">夹克</a>
+									<a href="#">卫衣</a>
+									<a href="#">毛呢大衣</a>
+									<a href="#">大码男装</a>
+									<a href="#">西装套装</a>	
+								</li>
+							</ul>
+						</li>							
+					</ul>						
+				</li>					
+				<li>
+					<a href="#">母婴</a>
+					<ul>
+						<li class="recommend-menu clearfix"><a href="">推荐品牌1</a><a href="">推荐品牌2</a><a href="">推荐品牌3</a></li>
+						<li>
+							<span>二级分类05</span>
+							<ul>
+								<li class="clearfix">
+									<a href="#">T恤</a>
+									<a href="#">牛仔裤</a>
+									<a href="#">休闲裤</a>
+									<a href="#">衬衫</a>
+									<a href="#">短裤</a>
+									<a href="#">夹克</a>
+									<a href="#">卫衣</a>
+									<a href="#">毛呢大衣</a>
+									<a href="#">大码男装</a>
+									<a href="#">西装套装</a>	
+								</li>
+							</ul>
+						</li>
+						<li>
+							<span>二级分类05</span>
+							<ul>
+								<li class="clearfix">
+									<a href="#">T恤</a>
+									<a href="#">牛仔裤</a>
+									<a href="#">休闲裤</a>
+									<a href="#">衬衫</a>
+									<a href="#">短裤</a>
+									<a href="#">夹克</a>
+									<a href="#">卫衣</a>
+									<a href="#">毛呢大衣</a>
+									<a href="#">大码男装</a>
+									<a href="#">西装套装</a>	
+								</li>
+							</ul>
+						</li>							
+					</ul>						
+				</li>					
+				<li>
+					<a href="#">运动/户外</a>
+					<ul>
+						<li class="recommend-menu clearfix"><a href="">推荐品牌1</a><a href="">推荐品牌2</a><a href="">推荐品牌3</a></li>
+						<li>
+							<span>二级分类06</span>
+							<ul>
+								<li class="clearfix">
+									<a href="#">T恤</a>
+									<a href="#">牛仔裤</a>
+									<a href="#">休闲裤</a>
+									<a href="#">衬衫</a>
+									<a href="#">短裤</a>
+									<a href="#">夹克</a>
+									<a href="#">卫衣</a>
+									<a href="#">毛呢大衣</a>
+									<a href="#">大码男装</a>
+									<a href="#">西装套装</a>	
+								</li>
+							</ul>
+						</li>
+						<li>
+							<span>二级分类06</span>
+							<ul>
+								<li class="clearfix">
+									<a href="#">T恤</a>
+									<a href="#">牛仔裤</a>
+									<a href="#">休闲裤</a>
+									<a href="#">衬衫</a>
+									<a href="#">短裤</a>
+									<a href="#">夹克</a>
+									<a href="#">卫衣</a>
+									<a href="#">毛呢大衣</a>
+									<a href="#">大码男装</a>
+									<a href="#">西装套装</a>	
+								</li>
+							</ul>
+						</li>							
+					</ul>						
+				</li>					
+				<li>
+					<a href="#">男鞋/女鞋</a>
+					<ul>
+						<li class="recommend-menu clearfix"><a href="">推荐品牌1</a><a href="">推荐品牌2</a><a href="">推荐品牌3</a></li>
+						<li>
+							<span>二级分类07</span>
+							<ul>
+								<li class="clearfix">
+									<a href="#">T恤</a>
+									<a href="#">牛仔裤</a>
+									<a href="#">休闲裤</a>
+									<a href="#">衬衫</a>
+									<a href="#">短裤</a>
+									<a href="#">夹克</a>
+									<a href="#">卫衣</a>
+									<a href="#">毛呢大衣</a>
+									<a href="#">大码男装</a>
+									<a href="#">西装套装</a>	
+								</li>
+							</ul>
+						</li>
+						<li>
+							<span>二级分类07</span>
+							<ul>
+								<li class="clearfix">
+									<a href="#">T恤</a>
+									<a href="#">牛仔裤</a>
+									<a href="#">休闲裤</a>
+									<a href="#">衬衫</a>
+									<a href="#">短裤</a>
+									<a href="#">夹克</a>
+									<a href="#">卫衣</a>
+									<a href="#">毛呢大衣</a>
+									<a href="#">大码男装</a>
+									<a href="#">西装套装</a>	
+								</li>
+							</ul>
+						</li>							
+					</ul>						
+				</li>					
+			</ul>
+		</li>
+		<li><a href="/">首页</a><span></span></li>
+		<li>
+			<a href="#">极成订购药房</a>
+			<ul class="sub-menu">
+				<li class="container">
+					<ul class="sub-menu-list">
+						<li><a href="#">处方药品</a></li>
+						<li><a href="#">进口药品</a></li>
+				        <li><a href="#">常见疾病</a></li>
+				        <li><a href="#">慢性疾病</a></li>
+				        <li><a href="#">重大疾病</a></li>
+				        <li><a href="#">进口保健品</a></li>
+				        <li><a href="#">滋补保健</a></li>
+				        <li><a href="#">健康护理</a></li>
+				        <li><a href="#">康乐情趣</a></li>
+					</ul>						
+				</li>					
+			</ul>
+		</li>
+		<li><a href="#">药房联盟</a></li>
+		<li><a href="#">食品超市</a></li>
+		<li><a href="#">百货超市</a></li>
+		<li><a href="#">医药采购</a></li>
+		<li><a href="#">药师咨询</a></li>
+		<li><a href="#">医师资询</a></li>
+		<li><a href="#">质量公告</a></li>
+		<li><a href="#">行业资讯</a></li>
+	</ul>		
+</div>
+</body>
+</html>
+<script src="js/jquery.min.js"></script>
+<script src="./js/bootstrap.min.js"></script>
+<script src="./js/top_menu.js"></script>

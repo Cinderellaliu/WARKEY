@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<style>
+	a:hover,a:visited,a:focus{text-decoration: none;outline: none;}
+	button,button:focus{outline: none;}
+	input,input:focus{outline: none !important;}
+	body {position: relative;min-width: 1024px;font-family: "microsoft yahei";color:#333;}
+	img{max-width: 100%;}
+	ul{margin:0;padding:0;}
+	ul li{list-style:none;}
+	i,em{font-style:normal;}
+	b{font-weight:normal;}
+	p{margin:0;}
+	label{font-weight:normal}
+	h1,h2,h3,h4,h5,p{margin:0;}
+	.right-menu-box{border:1px solid #e4e4e4;margin-bottom:38px;width:28%;}
+	.right-menu-box ul li{border-bottom: 1px solid #dcdcdc;}
+	.right-menu-box ul li:last-child{border-bottom: none;}
+	.right-menu-box ul li a{text-indent:20px;color: #242424;display: block; height:46px;line-height: 46px;position: relative;}
+	.right-menu-box ul li .inactive{background:url(images/leftmenu_downarrow.png) no-repeat 300px center;}
+	.right-menu-box ul li .inactives{background:url(images/leftmenu_uparrow.png) no-repeat 300px center #f5f5f5;}
+	.right-menu-box ul li ul{display: none;}
+	.right-menu-box ul li ul li {border:none;}
+	.right-menu-box ul li ul li a{color:#242424}
+	.right-menu-box ul li ul li a:hover,.left-menu-box ul li ul li a.active{color:red}
+</style>
+<body>
+	<div class="right-menu-box pull-left">
+		<ul>
+			<li><a href="javascript:void(0)" class="title">店内分类</a>
+			</li>		
+			<li><a href="javascript:void(0)" class="inactive">家居家纺</a>
+				<ul>
+					<li><a href="javascript:void(0)">菜单一</a></li> 
+					<li><a href="javascript:void(0)">菜单二</a></li> 
+				</ul>
+			</li>
+			<li><a href="javascript:void(0)" class="inactive">服装服饰</a>
+				<ul> 
+					<li><a href="javascript:void(0)">菜单一</a></li> 
+					<li><a href="javascript:void(0)">菜单二</a></li>
+				</ul>
+			</li>
+			<li><a href="javascript:void(0)" class="inactive">工匠定制</a>
+				<ul>
+					<li><a href="javascript:void(0)" class="active">菜单一</a></li> 
+					<li><a href="javascript:void(0)">菜单二</a></li> 
+				</ul>
+			</li>
+			<li><a href="javascript:void(0)" class="inactive inactives">智能电器</a>
+			<!-- inactives控制箭头的转向 及背景色-->
+				<ul style="display: block;"><!-- 控制闭合 -->
+					<li><a href="javascript:void(0)" class="active">智能电视</a></li> <!-- 控制默认字体颜色样式 -->
+					<li><a href="javascript:void(0)">安防</a></li> 
+					<li><a href="javascript:void(0)">路由器</a></li>
+					<li><a href="javascript:void(0)">网关</a></li>
+				</ul>
+			</li>			
+		</ul>
+	</div>
+</body>
+</html>
+<script src="./js/jquery.min.js"></script>
+<script src="./js/left_menu.js"></script>
+<script>
+	
+</script>

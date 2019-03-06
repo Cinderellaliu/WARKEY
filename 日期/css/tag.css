@@ -1,0 +1,75 @@
+/* Form input */
+.Form li{float:left;}
+.Form input[type=text],.Form input[type=password],.Form textarea{
+	display:inline-block;padding:6px 12px;font-size:14px;font-weight:300;line-height:1.4;color:#221919;background:#fff;border:1px solid #ddd;
+	
+	box-sizing:border-box;
+	-moz-box-sizing:border-box;
+	-ms-box-sizing:border-box;
+	-webkit-box-sizing:border-box;
+	
+	border-radius:2px;
+	-moz-border-radius:2px;
+	-webkit-border-radius:2px;
+}
+.Form textarea{min-height:90px}
+.Form label{display:inline-block;line-height:1.4em;font-size:18px}
+.Form input[type=text]:focus,.Form input[type=password]:focus,.Form textarea:focus{
+	border-color:#ddd;
+}
+.FancyForm li,.FancyForm li .input{position:relative}
+.FancyForm input[type=text],.FancyForm input[type=password],.FancyForm textarea{
+	background:transparent;border:1px solid #ddd;	
+	border-radius:2px;
+	-moz-border-radius:2px;
+	-webkit-border-radius:2px;
+}
+.FancyForm textarea{min-height:3.95em;line-height:1.3}
+.FancyForm label{
+	position:absolute;z-index:2;top:7px;left:13px;display:block;color:#BCBCBC;cursor:text;
+	
+	-moz-user-select:none;
+	-webkit-user-select:none;
+	
+	-moz-transition:all .16s ease-in-out;
+	-webkit-transition:all .16s ease-in-out;
+}
+.FancyForm .fff{
+	position:absolute;z-index:1;top:0;right:0;left:3px;bottom:0;background-color:#fff;
+	
+	border-radius:8px;
+	-moz-border-radius:8px;
+	-webkit-border-radius:8px;
+}
+.FancyForm input[type=text]:focus+label,.FancyForm input[type=password]:focus+label,.FancyForm textarea:focus+label{opacity:.5;filter:alpha(opacity="50");}
+.FancyForm .val label{left:-9999px;opacity:0!important;filter:alpha(opacity="0")!important;}
+
+/* tag */
+.default-tag a{background:none;font-size: 12px;border:1px solid #ccc;border-radius: 3em;}
+.tagbtn a{font-size:12px;color:#333333;display:block;float:left;height:22px;line-height:20px;overflow:hidden;margin:0 10px 10px 0;padding:0 10px 0 5px;white-space:nowrap;}
+/* default-tag */
+.default-tag a{background-position:100% 0;}
+.default-tag a:hover{background-position:100% -22px;}
+.default-tag a span{padding:0 0 0 5px;background-position:0 -60px;}
+.default-tag a:hover span{background-position:0 -98px;}
+.default-tag a.selected{opacity:0.6;filter:alpha(opacity=60);}
+.default-tag a.selected:hover{background-position:100% 0;cursor:default;}
+.default-tag a.selected:hover span{background-position:0 -60px;}
+/* plus-tag */
+.plus-tag{padding:0;}
+.plus-tag a{background:none;color:#20a16c;border:1px solid #abecd1;border-radius: 3em;height:24px;line-height:24px;}
+.plus-tag a span{float:left;padding-left:8px;}
+.plus-tag a em{display:block;float:left;margin:4px 0 0 8px;width:13px;height:13px;overflow:hidden;background-image:url(../images/tagbg.png);background-position:-168px -64px;cursor:pointer;background-color:#fff;}
+.plus-tag a:hover em{background-position:-168px -64px;}
+/* plus-tag-add */
+.plus-tag-add li{height:56px;position:relative;}
+.plus-tag-add li .label{float:left;margin-right: 20px;line-height: 32px;}
+.plus-tag-add button{float:left;}
+.plus-tag-add a{float:left;margin:12px 0 0 20px;display:inline;font-size:18px;background-position:-289px -59px;padding:0 0 0 16px;}
+.plus-tag-add a.plus{background-position:-289px -96px;}
+#mycard-plus{float:left;max-width:83%}
+.tag-box{margin-bottom:20px}
+.tag-box label{float:left;width:64px;font-size: 12px;color:#999;text-align: left;margin-right:20px;line-height: 32px;}
+.addtag-btn{display: inline-block;font-size: 14px;color:#fff;border:none;height:32px;line-height: 32px;padding:0 10px;margin-left: 10px;background-color: #3F89EC;border-radius: 2px;cursor: pointer;}
+.mytags{float:left;border-radius: 2px;min-height:36px;padding:10px 0 0 10px;}
+.default-tag a:hover{text-decoration: none;}

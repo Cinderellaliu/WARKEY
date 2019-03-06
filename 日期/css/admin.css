@@ -1,0 +1,14 @@
+.time-space{width:160px !important;min-width: 110px !important;}
+.id-space{width:80px !important;min-width: 60px !important;}
+.name-space{width:90px !important;min-width: 90px !important;}
+.tel-space{width:110px !important;min-width: 110px !important;}
+.common-space{min-width: 100px !important;}
+.tablesaw-cell-label{display: none;}
+@media (max-width: 1023px){
+    .mytable{border-collapse:collapse}
+    .mytable thead th{display: none;}
+    .mytable tbody tr{border-bottom: 2px solid #ed4e2a}
+    .mytable tbody td{width:100%;display: block;text-align: left}
+    .mytable .tablesaw-cell-label{display: inline-block;width:80px;}
+    .mytable .tablesaw-cell-content{display: inline-block;width:calc(100% - 90px);}
+}

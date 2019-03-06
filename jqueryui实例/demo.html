@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>demo</title>
+	<link rel="stylesheet" href="./jquery-ui-1.12.1.custom/jquery-ui.css">
+	<link rel="stylesheet" href="./css/main.css">
+</head>
+<body>
+	<ul id="todolist"></ul>
+</body>
+</html>
+<script src="./js/jquery-1.11.0.min.js"></script>
+<script src="./jquery-ui-1.12.1.custom/jquery-ui.js"></script>
+<script>
+	$.get('data.json',function(res){
+		todolist(res);
+	},'json');
+	function todolist(data){
+		var html="";
+		$(data).map(function(index,item){
+			html +=`<li>`+item.title+`<button class="del">X</button></li>`
+		})
+		$("#todolist").html(html);
+	}
+	$('#todolist').on('click','.del',function(){
+		var btnDel=this;
+		$('<div></div>').dialog({
+			modal:true,
+			title:"删除",
+			buttons:[
+			{
+		      text: "确定",
+		      icon: "ui-icon-heart",
+		      click: function() {
+		        $( this ).dialog( "close" );
+		        $(btnDel).parent().remove();
+		      }
+		    },
+		    {
+		      text: "取消",
+		      icon: "ui-icon-gear",
+		      click: function() {
+		        $( this ).dialog( "close" );
+		      }
+		    }
+			]
+		});
+	})
+</script>

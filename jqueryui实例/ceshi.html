@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>叠加背景</title>
+	<style>
+		.new{height:400px;width:400px;background-color:red;}
+		.op{background-image: url(images/heart.png);background-repeat:no-repeat;}
+	</style>
+</head>
+<body>
+	<div  class="new">
+		
+	</div>
+</body>
+</html>
+<script src="./js/jquery-1.11.0.min.js"></script>
+<script>
+	$('.new').on('click',function(){
+		$(this).addClass('op');
+	})
+</script>

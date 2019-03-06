@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" type="text/css" href="./css/jqzoom.css">
+	<style>
+		.recipe-img{width:600px;margin-right:40px;}
+		.recipe-big{height:300px;width:600px;margin-bottom:30px;position:relative;background:#f7f7f7}
+		.recipe-big-glass{position:absolute;right:0;bottom:0;}
+	</style>
+</head>
+<body>
+	<div class="recipe-big">
+		<div class="jqzoom">
+			<img src="./images/recipe_big.png" jqimg="./images/recipe_big.png">
+		</div>
+		<div class="recipe-big-glass">
+			<img src="./images/repice_glass.png" >
+		</div>
+	</div>
+</body>
+</html>
+<script type="text/javascript" src="./js/jquery.min.js"></script>
+<script type="text/javascript" src="./js/jquery.jqzoom-2.2.js"></script>
+<script>
+	$(".jqzoom").jqueryzoom({
+            xzoom: 200, 
+            yzoom: 200, 
+            offset: 1, 
+            position: "right",
+            preload: 1
+        });
+</script>

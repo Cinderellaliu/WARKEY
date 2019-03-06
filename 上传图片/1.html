@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>上传图片</title>
+ 	<link rel="stylesheet" type="text/css" href="./css/webuploader.css" />
+</head>
+<style>
+    .main-upload{margin:28px 0 30px;}
+    .main-upload-progress{font-size:12px;color:#868686;margin:0 30px 0 0;}
+    .main-up{padding:30px;}
+    .main-up-box{margin:0 24px 0 0;width:90px;}
+    .thumbnail{height:92px;width:92px;margin-bottom:10px;padding:0;border-radius:0;border:1px solid #dcdcdc;}
+    .info{font-size:12px;color:#868686;white-space: nowrap;overflow: hidden;text-overflow: ellipsis;}
+    .webuploader-pick{background:white; padding:0;}
+    .webuploader-pick-hover{background: white;}
+    .pull-left{float:left;}
+</style>    
+<body>
+	<div class="main-upload main-box">
+        <div class="main-title">附件上传 <p class="main-upload-progress pull-right">已上传<span class="main-upload-num">0</span>/9</p></div>
+        <div class="main-up clearfix">
+            <div id="pic-list" class="main-up-list pull-left"></div>
+            <div id="add-pic" class="pull-left"><img src="./img/add.png" class="main-up-add pull-left" alt="添加图片"></div>
+        </div>
+    </div>
+</body>
+</html>
+<script src="./js/jquery.min.js"></script>
+<script src="./js/webuploader.min.js" type="text/javascript"></script>
+<script>
+	var num = 0;
+	var uploader = WebUploader.create({
+        auto:true,
+        swf: '../css/Uploader.swf',
+        // server: '../js/up.php',
+        pick: '#add-pic',
+        resize: false,
+        fileNumLimit: 9,
+    });
+	uploader.on( 'fileQueued', function( file ) {
+        var item =$('<div class="main-up-box pull-left"><div id="'+file.id+'"class="file-item thumbnail">'+'<img class="main-up-pic">'+'</div>'+'<div class="info text-center">'+file.name+'</div></div>');
+        var img = item.find('img');
+        uploader.makeThumb(file,function(error,src){
+            str = file.name;
+             if (str != "") {
+                var pos = "." + str.replace(/.+\./, "");
+                if(pos == '.gif'||pos == '.jpg'||pos =='.jpeg'||pos =='.bmp'||pos =='.png'){
+                    img[0].src=src;
+                }
+                else{
+                    img[0].src= "../images/cute.jpg";
+                }
+                
+            }
+            
+        },92,92);//图片尺寸
+        $('#pic-list').append(item);
+    });
+    uploader.on( 'uploadComplete', function( file ) {
+        $('.main-upload-num').text(++num);//上传增加图片
+    })
+</script>

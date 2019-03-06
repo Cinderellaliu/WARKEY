@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link href="./css/bootstrap.min.css" rel="stylesheet">
+</head>
+<style>
+	.recipe-delace{margin:30px 0 0;}
+	.recipe-delace>h5{font-size:14px;color:#da1600;width:75px;}
+	.recipe-delace-txt{width:calc(30% - 75px);margin-top:12px;}
+	.recipe-delace-txt>p{font-size:12px;color:#999;max-width:270px;}
+	.recipe-delace-txt>p.active{overflow:hidden;text-overflow: ellipsis;white-space:nowrap;}
+	.recipe-delace-down{font-size:12px;color:#999;padding-right:18px;margin-left:12px;background:url(images/leftmenu_downarrow.png)no-repeat right center;}
+	.recipe-delace-up{font-size:12px;color:#999;padding-right:18px;margin-left:12px;background:url(images/leftmenu_uparrow.png)no-repeat right center;display:none}
+</style>
+<body>
+	<div class="recipe-delace clearfix">
+		<h5 class="pull-left">郑重声明 ： </h5>
+		<div class="recipe-delace-txt pull-left">
+			<p class="pull-left active">尊敬的顾客，极成医药受各门店委托为其发布药品等等等等等扽等尊敬的顾客，极成医药受各门店委托为其发布药品等等等等等扽等尊敬的顾客，极成医药受各门店委托为其发布药品等等等等等扽等尊敬的顾客，极成医药受各门店委托为其发布药品等等等等等扽等<b class="recipe-delace-up">收起</b></p>
+			<div class="recipe-delace-down pull-left">全部</div>
+		</div>
+		
+	</div>
+</body>
+</html>
+<script src="js/jquery.min.js"></script>
+<script src="../../js/bootstrap.min.js"></script>
+<script>
+	$('.recipe-delace-down').click(function(){
+		$(this).siblings('p').removeClass('active');
+		$(this).hide();
+		$('.recipe-delace-up').show()
+	})
+	$('.recipe-delace-up').click(function(){
+		$(this).parent().addClass('active');
+		$(this).hide();
+		$('.recipe-delace-down').show()
+	})
+</script>

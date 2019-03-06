@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>用jquery动画回到顶部</title>
+</head>
+<style>
+	html,body{
+		height:100%;
+	}
+	*{
+		padding:0;
+		margin:0;
+	}
+	body{
+		height:2000px;
+	}
+	#top{
+		line-height:20px;
+		width:100%;
+		background:#f5f5f5;
+		text-align:center;
+		position:fixed;
+		top:0;
+		left:0;
+	}
+	.t1{
+		margin-top:20px;
+		font-size:26px;
+		color:#333;
+		margin-bottom:0;
+	}
+	#nav{
+		line-height:20px;
+		font-size:10px;
+		color:#fff;
+		text-decoration:none;
+		background:black;
+		position:fixed;
+		right:20px;
+		top:100px;
+
+	}
+	#bottom{
+		line-height:20px;
+		background:#f5f5f5;
+		width:100%;
+		text-align:center;
+		position:fixed;
+		bottom:0;
+		left:0;
+	}
+</style>
+<body>
+	<div id="top">我是顶部</div>
+	<p class="t1" id="here">哈哈哈我是头部，快过来</p>
+	<a id="nav">回到顶部</a>
+	<div id="bottom">我是底部</div>	
+</body>
+</html>
+<script src="./js/jquery-1.8.3.min.js"></script>
+<script>
+	$('#nav').on('click',function(){
+		$('body,html').animate({scrollTop:0},200)
+	});//jquery写法
+
+	
+	// var nav= document.getElementById('nav');
+	// nav.onclick = function(){
+ //        document.body.scrollTop = document.documentElement.scrollTop = 0;
+ //    }//原生写法
+</script>
